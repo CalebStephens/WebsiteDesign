@@ -502,17 +502,31 @@ main {
   height: 90%;
   }
 
+  .back,a{
+    text-decoration: none;
+  }
+
+
+
   .flipped{
   transform: rotateY(180deg)
   }
 
   .button{
-    background-color: var(--dark-orange);
+    background-color: var(--dark-blue);
+    color: var(--white);
     width: 200px;
     height: 50px; 
-    margin-bottom: 5px;
-    border-radius: 5px;
-    
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+  }
+
+  .svg{
+    color: #E3371E;
   }
 
 
@@ -678,9 +692,7 @@ main {
       grid-template-areas: 
         'c1 .'
         'c2 c3'
-        'c4 c7'
-        'c5 .'
-        'c6 .'
+        'c6 c7'
         'c8 .';
       padding-block: 2rem;
       width: min(95%, 70em);
@@ -695,7 +707,7 @@ main {
       padding: 0 1.4rem;
       box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
       background-color: var(--light-silver);
-      color: green;
+      color: var(--dark-blue);
     }
     .contact-form input, .contact-form select {
       height: 2.8rem;
@@ -703,9 +715,9 @@ main {
     }
 
     .contact-form__submit button {
-        background-color: #13632e;
+        background-color: var(--dark-blue);
         border: none;
-        color: var(--off-white);
+        color: var(--white);
         padding: 7px 20px;
         text-align: center;
         text-decoration: none;
@@ -717,8 +729,8 @@ main {
         border-radius: 5px;
       }
       .contact-form__submit button:hover {
-        background-color: green;
-        color: var(--light-green-background);
+        
+        color: var(--dark-orange);
         box-shadow: none;
       }
       .contact-form__submit button:active {
@@ -758,6 +770,16 @@ main {
       margin: 5vw;
     }
 
+    input:invalid{
+      animation: shake 300ms;
+    }
+
+    @keyframes shake {
+      25%{transform: translateX(4px);}
+      50%{transform: translateX(-4px);}
+      75%{transform: translateX(4px);}
+    }
+
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -770,8 +792,6 @@ main {
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       grid-gap: 2rem;
       margin: 2rem;
-      
-
     }
 
     .item_images{
@@ -780,19 +800,46 @@ main {
       grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 5px;
       grid-row-gap: 5px;
+      height: 530px;
     }
 
-    .item_images.image_holder{
-      height: 100px;
-      width: 100px;
-      max-width: 500px;
+    .item-image_holder{
+      height: 250px;
+      width: 250px;
       background-color: #8c8e8d;
       border-radius: 5px;
     }
 
+    @media screen and (max-width: 40em) {
+      .item_images{
+        height: 319px;
+        width: 160px;
+      }
+    }
+    
+ 
+    
 
+ 
+    
+    .email-desc{ grid-area: c1; }
+    .item-email { grid-area: c2; }
+    .email-submit{ grid-area: c3; }
 
-
+    @supports (display: grid) {
+    .contact-item {
+      display: grid;
+      gap: 1.5rem;
+      grid-auto-columns: 1fr;
+      grid-template-areas: 
+        'c1 .'
+        'c2 .'
+        'c3 .';
+      padding-block: 2rem;
+      width: min(95%, 70em);
+      
+    }
+  }
 
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
