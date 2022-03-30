@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="mi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Poppins - Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome - icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="style.css">
+  <title>Taputapu</title>
+</head>
+
+<body>
+
+  <main>
+
+      <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          HEADER AND NAVIGATION
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+    <header>
+      <h1>Taputapu</h1>
+      <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="current-page">Home</a>
+        <a href="news.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        
+      </nav>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+
+      <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          INTRODUCTION OR BANNER
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+      <article class="introduction">
+        <h2>
+          Get Out, Get Going!
+        </h2>
+        <p>
+          Need to find some room in the garage or just want to see some sports gear gone? Connect with local families an people who just want to see their unneeded or unwanted gear out getting used.         </p>
+        <!-- <a href="#" class="readmore-button">
+          Continue reading &hellip;
+        </a> -->
+      </article>
+
+      <div class = "illustrion-space">
+            <div class = "dot big_dot"></div>
+            <div class = "dot second_dot"></div>
+            <div class = "dot third_dot"></div>
+            <div class = "dot forth_dot"></div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          GRID LAYOUT
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+    <section class="services__grid">
+
+      <article class="service__item">
+        <div class = "image_holder">
+          <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+        </div>
+        <h2 class="service__name">Buy</h2>
+        <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+      <article class="service__item">
+        <div class = "image_holder">
+          <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+        </div>
+        <h2 class="service__name">Sell</h2>
+        <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+        <a href="#" class="next-button">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </article>
+
+      <article class="service__item" id="flip" onclick="flipper()">
+        <div class="front">
+          <div class = "image_holder">
+            <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+          </div>
+          <h2 class="service__name">Rent</h2>
+          <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+          <a href="#" class="next-button">
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
+        <div class="back">
+          <a href="beech-species.html"><div class= "forYou button">Rent For Me</div></a>
+          <div class= "rentOut button">Rent Out</div>
+
+        </div>
+      </article>
+      
+
+  </section>
+
+      <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          FOOTER
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+  <footer>
+    <div class = "bring_forward">
+      <p>
+        The Plant Names Database lists over 46,000 names and is a primary source of information for Ngā Tipu o Aotearoa - New Zealand Plants. The purpose of the New Zealand Plant Names Database is to provide an authoritative record of the scientific names, taxonomic concepts (i.e., synonymies), and biostatus for the lichens, liverworts, mosses, ferns, freshwater algae and seed plants in New Zealand. It also records the associated literature, vernacular and Māori names, as well as recently published keys and descriptions for some taxa. Editorial work on the Plant Names Database is ongoing and as new treatments, taxa and naturalisations are published these are added to the database.
+      </p>
+      <div class="footer-grid">
+
+        <article class="footer__menu">
+          <h2 class="footer__menu__heading">
+            Navigation
+          </h2>
+          <ul class="footer__menu__list">
+            <li><a href="#">Home</a></li>
+            <li onclick="toTop()"><a href="#">Back to Top</a></li>
+          </ul>
+        </article>
+
+        <article class="footer__menu">
+          <h2 class="footer__menu__heading">
+            Services
+          </h2>
+          <ul class="footer__menu__list">
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Rent</a></li>
+          </ul>
+        </article>
+
+        <article class="footer__menu">
+          <h2 class="footer__menu__heading">
+            About
+          </h2>
+          <ul class="footer__menu__list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms & conditions</a></li>
+            <li><a href="#">Privacy statement</a></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="footer__site-details">
+        <p>Copyright Taputapu&copy; 2022.</p>
+      </div>
+    </div>
+    <div class = "dot footer_dot"></div>
+
+    
+  </footer>
+ 
+  </main>
+
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    function flipper(){
+      let name = document.querySelector("#flip");
+      let hide = document.querySelector(".front");
+      let hidden = document.querySelector(".back");
+      //let styling = document.querySelector(".service__item:last-of-type").style;
+      if (name.className === "service__item"){
+        console.log("here");
+        //styling.backgroundColor = "#151F30";
+        name.className += " flipped";
+        hide.style.display = "none";
+        hidden.style.display = "flex";
+        
+      }else{
+        name.className = "service__item";    
+        hide.style.display = "block";  
+        hidden.style.display = "none";
+        //styling.backgroundColor = "#FFFFFF";
+      }
+      
+    }
+
+ /*    function toTop(){
+      console.log("here");
+      document.querySelector("body").scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      }; */
+
+
+
+    </script>
+
+</body>
+</html>
