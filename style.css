@@ -74,6 +74,10 @@
     text-decoration-skip-ink: auto;
   }
 
+  a{
+    text-decoration: none;
+  }
+
   /* Make images easier to work with */
   img,
   picture {
@@ -426,27 +430,29 @@ main {
   @supports (display: grid) {
     .services__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         grid-gap: 2rem;
         margin: 2rem;
       } }
 
   .service__item {
     text-align: center;
-    background-color: var(--light-green-background);
+    color: var(--dark-blue);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 10px;
     padding: 2rem 2rem 1.4rem 2rem;
     transition: box-shadow .3s;
     transition: 0.5s;
     cursor: pointer;
+    background: linear-gradient(0deg, rgba(21,31,48,1) 0%, rgba(16,55,120,1) 100%);
+
   }
 
-  /* .service__item:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    background-color: var(--dark-blue);
-    color: var(--white);
-  } */
+  .service__item:hover {
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
+    
+
+  } 
   
 
   .service__item__image {
@@ -779,6 +785,25 @@ main {
       50%{transform: translateX(-4px);}
       75%{transform: translateX(4px);}
     }
+
+   /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    011.  Scrollable item PAGE
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+    .buy-label{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      border-bottom: 5px solid var(--dark-blue);
+    }
+
+
+
+
+
+
 
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
