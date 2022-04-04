@@ -178,6 +178,7 @@
     gap: 0 1rem;
     justify-content: flex-end;
     align-items: center;
+    border-radius: 20px 0  0 20px;
   }
   
   .topnav a {
@@ -198,7 +199,7 @@
   .icon {
     position: absolute;
     display: none;
-    color: var(--dark-blue);
+    color: var(--dark-orange);
     font-size: 2em;
     text-decoration: none;
   }
@@ -213,7 +214,9 @@
         grid-template-columns: 1fr;
         grid-gap: 0.7em;
     }
-    .topnav a { display: none; }
+    .topnav a { display: none; 
+    color: var(--white);
+    }
     .icon {
       float: right;
       display: block;
@@ -234,7 +237,9 @@
       width: 40vw;
       margin-top: 0;
       padding: 6em 2em 4em 2em;
-      background-color: var(--normal-blue);
+      background-color: var(--dark-blue);
+      
+      
     }
     .icon {
       position: absolute;
@@ -245,6 +250,7 @@
       float: none;
       display: block;
       text-align: right;
+      color: var(--white);
     }
   }
 
@@ -405,7 +411,7 @@ main {
   width: 40vw;
   margin-top: 0;
   padding: 6em 2em 4em 2em;
-  background-color: var(--normal-blue);
+ 
 }
 
 .topnav.responsive a {
@@ -413,13 +419,6 @@ main {
   display: block;
   text-align: right;
 }
-
-
-
-
-
-
-
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -444,7 +443,7 @@ main {
     transition: box-shadow .3s;
     transition: 0.5s;
     cursor: pointer;
-    background: linear-gradient(0deg, rgba(21,31,48,1) 0%, rgba(16,55,120,1) 100%);
+    /* background: linear-gradient(0deg, rgba(21,31,48,1) 0%, rgba(16,55,120,1) 100%); */
 
   }
 
@@ -482,8 +481,11 @@ main {
     height: 300px;
     width: 100%;
     max-width: 500px;
-    background-color: #8c8e8d;
+    background-color: var(--dark-blue);
     border-radius: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
   }
 
   #flip{
@@ -820,12 +822,8 @@ main {
     }
 
     .item_images{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 5px;
-      grid-row-gap: 5px;
-      height: 530px;
+      
+     
     }
 
     .item-image_holder{
@@ -836,10 +834,7 @@ main {
     }
 
     @media screen and (max-width: 40em) {
-      .item_images{
-        height: 319px;
-        width: 160px;
-      }
+      
     }
     
  
