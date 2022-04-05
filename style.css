@@ -692,6 +692,8 @@ main {
     .contact-form__message { grid-area: c6; }
     .contact-form__browser { grid-area: c7; }
     .contact-form__submit { grid-area: c8; }
+    .contact-form__dates { grid-area: c9;}
+    .contact-form__image { grid-area: c10;}
 
     .contact-form {
       display: grid;
@@ -701,6 +703,7 @@ main {
         'c1 .'
         'c2 c3'
         'c6 c7'
+        'c9 c10'
         'c8 .';
       padding-block: 2rem;
       width: min(95%, 70em);

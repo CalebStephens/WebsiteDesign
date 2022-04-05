@@ -43,43 +43,52 @@
       </a>
     </header>
 
+    <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-    <div class = "buy-label"><h2>Browse Items Up For Sale</h2></div>
-
-            <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          GRID LAYOUT
+          Content
     
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+    <div class = "buy-label"><h2>Place an item for Rent!</h2></div>
 
-        <section class="services__grid">
+        
+    <form name="contact" method="POST" enctype="multipart/form-data" data-netlify="true" class="contact-form" action="/success.html">
+      <input type="hidden" name="form-name" value="contact">
 
-          <a href="individual-item.html" class="service__item">
+      <h3 class="contact-form__heading">Complete this form:</h3>
+      <p class="contact-form__name">
+          <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" pattern= "[a-z]*" required autofocus/>  
+      </p>
+      <p class="contact-form__email">
+          <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required/>
+      </p>
+      <p class="contact-form__message">
+          <label>Description:</label><br><textarea name="message" rows="7" cols="60" placeholder="Type your message. . ."></textarea>
+      </p>
+      <p class="contact-form__dates">
+        <label>Available From Which Date: </label><br><input type="date" name="date" placeholder="" required/>
+    </p>
+    <p class="contact-form__image">
+        <label>Upload: </label><br><input type="file" name="" placeholder="" required/>
+    </p>
       
-              <img  src="images/basketball.jpg" alt="basketball">
-            
-            <h2 class="service__name">Basketball</h2>
-            <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-          </a>
+
+      <p class="contact-form__browser">
+          <label>How would you categorize this item?</label><br>
+          <input list="browsers"  placeholder="Choose from list">
+          <datalist id="browsers">
+              <option value="Bikes">
+              <option value="Balls">
+              <option value="Water Sports">
+              <option value="Scooters">
+              <option value="Skateboards">
+          </datalist>
+      </p>
+      <p class="contact-form__submit">
+          <button type="submit">Send</button>
+      </p>
+  </form>
+
     
-          <article class="service__item">
-            
-               <img  src="images/bmx.jpg" alt="bmx">
-            
-            <h2 class="service__name">BMX</h2>
-            <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-          </article>
-    
-          <article class="service__item">
-            
-              <img  src="images/second-bike.jpg" alt="kowhai flowers">
-            
-            <h2 class="service__name">Mountain Bike</h2>
-            <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-          </article>
-          
-    
-      </section>
     
           <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     
