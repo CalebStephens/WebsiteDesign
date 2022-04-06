@@ -17,7 +17,8 @@
   009.  service PAGE LAYOUT
   010.  CONTACT FORM
   011.  ITEM PAGE
-  012.  PAGE FOOTER
+  012.  ABOUT PAGE
+  013.  PAGE FOOTER
 
   (to jump to any section of the Contents, use the section number (e.g. 002) in 'Find', Cmd-F)
 
@@ -66,7 +67,6 @@
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    
   }
 
   /* A elements that don't have a class get default styles */
@@ -124,13 +124,10 @@
       --dark-blue: #151F30;
       --dark-orange: #E3371E;
       --normal-blue: #103778;
-      --page-card-background: #b2d8c7;
-      --beige-page-background: #edece2;
-      --slide-out-menu-background: rgba(233, 240, 234, 0.93);
-      --footer-background: #173826;
+      --deep-orange: #9e2615; 
       --white: #ffffff;
       --description-text: #8c8e8d;
-      --light-silver: #fcfcfa;
+     
   }
 
   body {
@@ -148,8 +145,8 @@
     header {
       max-width: 1200px;
       margin: 0 auto;
-      /*background-color: var(--light-green-background);*/
-      padding: 2rem 2rem 2rem 2rem;
+  
+      padding: 2rem 2rem 0 2rem;
       min-height: 7em;
       display: flex;
       justify-content: space-between;
@@ -280,7 +277,6 @@ main {
 }
 
 .introduction {
-    background-color: var(--off-white);
     padding: 2rem;
 }
 
@@ -298,31 +294,6 @@ main {
     margin-bottom: 1rem;
 }
 
-.readmore-button {
-    background-color: #13632e;
-    border: none;
-    color: var(--off-white);
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all .3s;
-    border-radius: 5px;
-  }
-  .readmore-button:hover {
-    background-color: green;
-    color: var(--light-green-background);
-    box-shadow: none;
-  }
-  .readmore-button:active {
-    box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
-  }
-
-
   /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
       006.  Illustration
@@ -336,15 +307,21 @@ main {
   position: relative;
   overflow: hidden;
 }
+
 .dot{
   border-radius: 50%;
-  position: absolute;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 3px 3px 3px 3px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot-illustration{
+  position: absolute;
 }
 
 .big_dot{
-  height: 450px;
-  width: 450px;
+  height: 28.125rem;
+  width: 28.125rem;
   background-color: var(--normal-blue);
   left: 45%;
   top: 35%;
@@ -359,13 +336,14 @@ main {
 }
 
 .second_dot{
-  height: 250px;
-  width: 250px;
+  height: 260px;
+  width: 260px;
   background-color: var(--dark-orange);
   right: 85%;
   top: 15%;
   animation: secondDot 2s infinite;
   z-index: 3;
+  overflow: hidden;
 }
 
 @keyframes secondDot {
@@ -397,11 +375,39 @@ main {
   left: 35%;
   bottom: 15%;
   animation: forthDot 5s infinite;
+  transform:rotate(-20deg);
 }
 @keyframes forthDot {
   0%   { left: 35%; bottom: 15%;}
   50%  { left: 80%; bottom: 15%;}
   100% { left: 35%; bottom: 15%;}
+}
+
+@media screen and (max-width: 65.875em) {
+  .illustrion-space{
+    height: 40vh;
+  }
+
+  .big_dot{
+    height: 18.125rem;
+    width: 18.125rem;
+  }
+  .third_dot{
+    height: 18.125rem;
+    width: 18.125rem;
+  }
+  .second_dot{
+    height: 8.125rem;
+    width: 8.125rem;
+  }
+
+  .forth_dot{
+    height: 8.125rem;
+    width: 8.125rem;
+    position: absolute;
+    z-index: 2;
+  }
+
 }
 
 .topnav.responsive {
@@ -444,16 +450,13 @@ main {
     transition: 0.5s;
     cursor: pointer;
     /* background: linear-gradient(0deg, rgba(21,31,48,1) 0%, rgba(16,55,120,1) 100%); */
-
+    
   }
 
   .service__item:hover {
     box-shadow: inset rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
-    
-
   } 
   
-
   .service__item__image {
     width: 100%;
     max-width: 500px;
@@ -486,14 +489,25 @@ main {
     display: flex;
     justify-items: center;
     align-items: center;
+    overflow: hidden;
+    
   }
 
   #flip{
-    /* width: 100%;
-    height: 100%; */
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+    
+  }
+
+  .hold-space{
+    height: 392px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   div{
@@ -508,10 +522,28 @@ main {
   justify-content: center;
   flex-direction: column;
   height: 90%;
+  overflow: hidden;
+  position: relative;
+  z-index: 444;
+  border-radius: 5px;
+  background-color: var(--dark-blue);
+  }
+
+  .back,h2{
+    font-weight: 400;
+  margin-top: .4rem;
+  margin-bottom: .4rem;
   }
 
   .back,a{
     text-decoration: none;
+  }
+  .rent_dot{
+    height: 350px;
+    width: 350px;
+    background-color: var(--dark-orange);
+    left: 35%;
+    bottom: 15%;
   }
 
 
@@ -531,13 +563,14 @@ main {
     align-items: center;
     justify-content: center;
     font-weight: 400;
+    position: relative;
+    z-index: 444;
   }
 
   .svg{
     color: #E3371E;
+    transform:rotate(-20deg);
   }
-
-
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -611,19 +644,18 @@ main {
     color: var(--dark-blue);
     font-weight: 400;
     font-size: 2.6em;
-    /* margin-bottom: .4rem; */
   }
 
   .servicepage__card h3 {
     font-weight: 300;
     font-size: 2em;
-    /* margin-bottom: .4rem; */
+   
   }
 
   .servicepage__card h4 {
     font-weight: 500;
     font-size: 1.3em;
-    /* margin: 2rem 0 .5rem 0; */
+  
   }
 
   .servicepage__card b {
@@ -634,7 +666,6 @@ main {
     color: var(--dark-blue);
     font-weight: 400;
     font-size: .9rem;
-    /* margin-bottom: 1rem; */
     max-width: 24rem;
   }
   .servicepage__card__desc ul {
@@ -646,12 +677,11 @@ main {
     background-image: url(images/list-image.svg);
     background-position: 0 .28rem;
     background-size: .7rem .7rem;
-    background-repeat: no-repeat;
-    /* margin: .3rem 0; */
+    background-repeat: no-repeat; 
   }
 
   .servicepage__card__image {
-    /* margin-bottom: 1rem; */
+    
     width: 100%;
     max-width: 24rem;
   }
@@ -692,18 +722,19 @@ main {
     .contact-form__message { grid-area: c6; }
     .contact-form__browser { grid-area: c7; }
     .contact-form__submit { grid-area: c8; }
-    .contact-form__dates { grid-area: c9;}
     .contact-form__image { grid-area: c10;}
+    .sell-desc{grid-area:c11;}
 
     .contact-form {
       display: grid;
-      gap: 1.5rem;
+      gap: .5rem;
       grid-auto-columns: 1fr;
       grid-template-areas: 
         'c1 .'
+        'c11 .'
         'c2 c3'
         'c6 c7'
-        'c9 c10'
+        'c6 c10'
         'c8 .';
       padding-block: 2rem;
       width: min(95%, 70em);
@@ -763,12 +794,15 @@ main {
         display: grid;
         grid-template-areas: 
           'c1'
+        'c11'
           'c2'
           'c3'
           'c4'
           'c5'
           'c6'
           'c7'
+          'c9'
+          'c10'
           'c8';
         margin-left: 1em;
       }
@@ -790,27 +824,7 @@ main {
       50%{transform: translateX(-4px);}
       75%{transform: translateX(4px);}
     }
-
-   /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-    011.  Scrollable item PAGE
-
-    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-    .buy-label{
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      border-bottom: 5px solid var(--dark-blue);
-    }
-
-
-
-
-
-
-
-
+    
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
     011.  ITEM PAGE
@@ -823,31 +837,33 @@ main {
       grid-gap: 2rem;
       margin: 2rem;
     }
+    .buy-label{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      border-bottom: 5px solid var(--dark-blue);
+    }
+
+    .item_images,img{
+      border-radius: 10px;
+    }
 
     .item_info{
       display: flex;
       justify-content: space-evenly;
       align-content: center;
       flex-direction: column;
+      color: var(--dark-blue);
+      border-radius: 10px;
 }
      
-  
-
     .item-image_holder{
       height: 250px;
       width: 250px;
       background-color: #8c8e8d;
       border-radius: 5px;
     }
-
-    @media screen and (max-width: 40em) {
-      
-    }
     
- 
-    
-
- 
     
     .email-desc{ grid-area: c1; }
     .item-email { grid-area: c2; }
@@ -868,10 +884,33 @@ main {
     }
   }
 
+ /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    012.  ABOUT PAGE
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+    
+      .about{
+        height:50vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      .about h3{
+        
+        font-weight: 300;
+        font-size: 2em;
+        margin-bottom: 1rem;
+      }
+
+
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-    012.  PAGE FOOTER
+    013.  PAGE FOOTER
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
