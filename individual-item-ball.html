@@ -33,9 +33,9 @@
       <h1>Taputapu</h1>
       <nav class="topnav" id="myTopnav">
         <a href="index.html" >Home</a>
-        <a href="services.html" >Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="current-page">Contact Us</a>
+        <a href="services.html" class="current-page">Services</a>
+        <a href="about.html" >About</a>
+        <a href="contact.html">Contact Us</a>
         
       </nav>
       <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
@@ -43,41 +43,55 @@
       </a>
     </header>
 
-      <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          CONTACT FORM
-    
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-            
-            <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/success.html">
-                <input type="hidden" name="form-name" value="contact">
+    <div class = "item_page">
+      <div class = "item_images"> 
+         <img  src="images/jabulani.jpg">
+        
+       
+      </div>
+        <div class = "item_info">
+        <h2>Jabulani Football</h2>
+        <p>South Africa World Cup football, that plays well, voted amongst the fans best world cup ball ever.
+         <br> Best for ages 7+.
+         <br> Available From: 7/4/2022
+        </p>
+        
+        
 
-                <h3 class="contact-form__heading">Contact us</h3>
-                <p class = "sell-desc">Were here to help, so please fill out the form below with amy questions or issues you may have!</p>
-                <p class="contact-form__name">
-                    <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" pattern= "[A-Za-z]*" required autofocus/>  
-                </p>
-                <p class="contact-form__email">
-                    <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required/>
-                </p>
-                <p class="contact-form__message">
-                    <label>Message: </label><br><textarea name="message" rows="7" cols="60" placeholder="Type your message. . ."></textarea>
-                </p>
-                <p class="contact-form__browser">
-                    <label>What browser are you using?</label><br>
-                    <input list="browsers"  placeholder="Choose from list">
-                    <datalist id="browsers">
-                        <option value="Internet Explorer">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
-                    </datalist>
-                </p>
-                <p class="contact-form__submit">
-                    <button type="submit">Send</button>
-                </p>
-            </form>
+        <form name="contact" method="POST" data-netlify="true" class="contact-item" action="/success.html">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="contact-item__email">
+          <label class = "email-desc">Get In Contact With Seller: </label>
+              <br><input type="email" name="email" placeholder="Email" >
+              <button type="submit">Send</button>
+          </p>
+  
+        </form>
+
+
+      </div>
+      
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
 
       <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
