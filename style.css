@@ -199,6 +199,7 @@
     color: var(--dark-orange);
     font-size: 2em;
     text-decoration: none;
+    z-index: 55;
   }
   
   @media screen and (max-width: 40em) {
@@ -235,7 +236,7 @@
       margin-top: 0;
       padding: 6em 2em 4em 2em;
       background-color: var(--dark-blue);
-      
+      z-index: 2;
       
     }
     .icon {
@@ -570,6 +571,11 @@ main {
   .svg{
     color: #E3371E;
     transform:rotate(-20deg);
+    position: relative;
+  }
+
+  .below{
+    
   }
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
